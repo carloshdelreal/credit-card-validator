@@ -1,13 +1,14 @@
 import { Request, ResponseObject, ResponseToolkit } from '@hapi/hapi';
 import Boom from '@hapi/boom';
+import luhn from 'luhn';
 
 export const validateCreditCardHandler = async (
   request: Request,
   h: ResponseToolkit
 ): Promise<ResponseObject> => {
   try {
-    console.log(request.payload);
-    return h.response({hello:'hello'});
+    const isValid = luhn.validate(request.payload.creditCardNumber);
+    return h.response({isValid});
   } catch (error) {
     // eslint-disable-next-line no-console
     console.log(error);

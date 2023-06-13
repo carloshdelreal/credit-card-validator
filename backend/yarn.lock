@@ -4303,6 +4303,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+luhn@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/luhn/-/luhn-2.4.1.tgz#9cf501c5d0e9f7ee79504338ae71c9bcc67c304a"
+  integrity sha512-p1eEWSb2RJAfv+BzrPEUqbUXV1H3ylHEAOk9yDM1L12ojD6OQQGrE29DqKLa0XYluJTIwXIOFmyzVOme3QSyww==
+
 make-dir@^2.0.0, make-dir@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-2.1.0.tgz#5f0310e18b8be898cc07009295a30ae41e91e6f5"
