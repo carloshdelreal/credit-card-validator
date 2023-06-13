@@ -18,7 +18,12 @@ const Form = () => {
         try {
             e.preventDefault();
             const res = await productService.validate(creditCard.creditCard);
-            toast.success(res.data.message);
+            console.log(res.data)
+            if (res.data.isValid) {
+                toast.success('The credit card number is valid');
+            } else {
+                toast.error('The credit card number is invalid');    
+            }
             navigate('/');
         } catch (error: any) {
             toast.error(error.message);
