@@ -1,0 +1,60 @@
+{
+  "name": "credit-card-validator",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Credit card validator",
+  "repository": "https://github.com/carloshdelreal/credit-card-validator",
+  "author": "Carlos Humberto Del Real <carloshdelreal@gmail.com>",
+  "contributors": [
+    "Carlos Humberto Del Real <carloshdelreal@gmail.com>"
+  ],
+  "engines": {
+    "node": ">=0.14"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "lint": "yarn prettier && yarn lint:ci --fix",
+    "lint:fix": "eslint --ext .js,.ts . --fix",
+    "lint:ci": "eslint --ext .js,.ts .",
+    "prettier": "prettier --write --loglevel warn .",
+    "pretest": "yarn test:set:env",
+    "test:set:env": "ts-node src/scripts/setTestEnv.ts",
+    "test": "TEST=true jest --runInBand --detectOpenHandles --watchAll"
+  },
+  "dependencies": {
+    "@hapi/basic": "^6.0.0",
+    "@hapi/boom": "^9.1.4",
+    "@hapi/hapi": "^20.2.1",
+    "@hapi/inert": "^6.0.5",
+    "@hapi/joi": "^17.1.1",
+    "@hapi/jwt": "^2.1.0",
+    "@hapi/vision": "^6.1.0",
+    "@types/node": "^17.0.21",
+    "bcryptjs": "^2.4.3",
+    "blipp": "^4.0.2",
+    "hapi-auth-jwt2": "^10.2.0",
+    "hapi-swagger": "^14.2.5",
+    "joi": "^17.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@babel/register": "^7.17.0",
+    "@faker-js/faker": "^6.0.0-beta.0",
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "concurrently": "^7.1.0",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  }
+}

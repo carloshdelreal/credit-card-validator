@@ -1,0 +1,16 @@
+# eslint ignores nested ignore files in a workspace
+# In order for linting to work correctly locally and in CI/CD, any changes here
+# should also be made to the .eslintignore file in the respective package folders
+
+# General #
+##########
+build/
+coverage/
+dist/
+generated/
+
+# API #
+##########
+migrations/
+package.json
+package-lock.json
